@@ -6,8 +6,7 @@ import Button from '@mui/material/Button';
 import { Typography } from '@mui/material';
 import "../../assets/css/style.css";
 import DehazeIcon from '@mui/icons-material/Dehaze';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+
 
 
 
@@ -39,7 +38,7 @@ export default function Header(){
         </Grid>
         <Grid item md ={6} sm={5} spacing={5} sx={{paddingTop:"20px", display:{md:'flex',xs:'none'}}}>
           {pages.map((page) => (
-            <Button variant="text"><Typography textAlign="center" sx={{fontSize:'15px'}}>{page}</Typography></Button>
+            <Button variant="text"><Typography textAlign="center" sx={{fontSize:'15px', fontFamily:'cursive'}}>{page}</Typography></Button>
           ))}
             <Button variant='text' sx={{marginLeft:'40px'}}>SignUp</Button>
         </Grid>

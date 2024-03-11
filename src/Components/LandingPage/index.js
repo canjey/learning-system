@@ -2,7 +2,10 @@ import React from "react";
 import Header from "./Header";
 import Welcome from "./Welcome";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import Featured from "./Featured";
+import Categories from "./Categories";
+import Success from "./Stories";
 
 
 export default function LandingPage(){
@@ -24,8 +27,11 @@ export default function LandingPage(){
         <>
             <ThemeProvider theme={darkTheme}>
             <Header />
-              <Box sx={{paddingLeft: {md:'10%', xs:'10%' }}}>
+              <Box sx={{paddingLeft: {md:'5%', xs:'10%' }, paddingRight: {md:'5%', xs:'10%'}}}>
                 <Welcome />
+                <Featured />
+                <Categories/>
+                <Success />
               </Box>
         </ThemeProvider>
         

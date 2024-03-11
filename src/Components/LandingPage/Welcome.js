@@ -27,10 +27,10 @@ export default function Welcome(){
 
                 </Grid>
                 <Grid item md={4} sx={{marginLeft: {xs:'100px'}}}>
-                    <img src={Education} className="education-container"/>
+                    <img src={Education} alt="Education" className="education-container"/>
                 </Grid>
             </Grid>
-            <Grid container sx={{marginTop:"20px"}}>
+            {/* <Grid container sx={{marginTop:"20px"}}>
                 <Grid item md={4} xs={4}>
                     <Typography variant="h4">
                         Our
@@ -40,40 +40,40 @@ export default function Welcome(){
                     </Typography>
                 </Grid >
                 <Grid  sx={{display:'flex'}}>
-                <Grid item md={2.0} xs={2.5}>
-                    <Typography variant="h6">
+                <Grid item md={4.0} xs={2.5}>
+                    <Typography variant="h4">
                         10K+
                     </Typography>
-                    <Typography>
+                    <Typography variant="p">
                         Total Students
                     </Typography>
                 </Grid>
-                <Grid item md={2.0} xs={2.5}>
-                <Typography variant="h6">
+                <Grid item md={4.0} xs={2.5}>
+                <Typography variant="h4">
                         20K+
                     </Typography>
-                    <Typography>
+                    <Typography variant="p">
                         Total Courses
                     </Typography>
                 </Grid>
-                <Grid item md={2.0} xs={2.5}>
-                <Typography variant="h6">
+                <Grid item md={4.0} xs={2.5}>
+                <Typography variant="h4">
                         2K
                     </Typography>
-                    <Typography>
+                    <Typography variant="p">
                         Certified Tutor
                     </Typography>
                 </Grid>
-                <Grid item md={2.0} xs={2.5}>
-                <Typography variant="h6">
+                <Grid item md={4.0} xs={2.5}>
+                <Typography variant="h4">
                         5K
                     </Typography>
-                    <Typography>
+                    <Typography variant="p">
                         Certified Tutor
                     </Typography>
                 </Grid>
             </Grid>
-            </Grid>
+            </Grid> */}
         </Box>
         </>
     )
