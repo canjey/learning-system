@@ -1,0 +1,12 @@
+.education-container{
+    width: 90%;
+    margin-left: -50px
+}
+.logo-container{
+    margin-left: 20%;
+}
+.btn-main {
+    border-radius: 30px;
+    color:black;
+    background-color: yellow;
+}

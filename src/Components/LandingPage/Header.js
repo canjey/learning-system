@@ -1,145 +1,50 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import Grid from '@mui/material/Grid';
 import Logo from '../../assets/images/logo.png';
+import Button from '@mui/material/Button';
+import { Typography } from '@mui/material';
+import "../../assets/css/style.css";
+import DehazeIcon from '@mui/icons-material/Dehaze';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Home', 'Features', 'Downloads', 'Support', 'Login'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+export default function Header(){
+  const pages = ['Home', 'Features', 'Downloads', 'Support', 'Login'];
+  const [isShow, setIsShow] = React.useState(false);
+  const handleOpenMenu = () => {
+    setIsShow(!isShow);
+  }
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <img src={Logo} alt="" className="logoImage" sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}/>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },  }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'primary', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
+    <>
+    <Box sx={{backgroundColor:"#222121", marginTop:"-20px"}}>
+      <Grid container sx={{paddingTop:"20px"}}>
+        <Grid item xs={2} sx={{display: {md:'none', xs:'flex' }, marginLeft:'100px', marginTop:'25px'}}>
+          <DehazeIcon onClick={handleOpenMenu}/>
+          <Grid item sx={{ display: isShow ? 'block' : 'none' }}>
+          {pages.map((page) => (
+            <Button variant="text"><Typography textAlign="center" sx={{fontSize:'15px'}}>{page}</Typography></Button>
+          ))}
+            <Button variant='text'>SignUp</Button>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
+          </Grid>
+
+        </Grid>
+        <Grid item md={6} sm={5}>
+          <img src={Logo} alt="logo" className='logo-container'/>
+        </Grid>
+        <Grid item md ={6} sm={5} spacing={5} sx={{paddingTop:"20px", display:{md:'flex',xs:'none'}}}>
+          {pages.map((page) => (
+            <Button variant="text"><Typography textAlign="center" sx={{fontSize:'15px'}}>{page}</Typography></Button>
+          ))}
+            <Button variant='text' sx={{marginLeft:'40px'}}>SignUp</Button>
+        </Grid>
+      </Grid>
+    </Box>
+    </>
+  )
 }
-export default Header;
