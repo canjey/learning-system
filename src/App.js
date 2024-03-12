@@ -3,25 +3,30 @@ import LandingPage from './Components/LandingPage';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 
-const darkTheme = createTheme({
+
+export const themeOptions = {
   palette: {
-    mode: 'dark',
-    primary:{
-      light:'#fffff',
-      main:'#FFCC00',
+    mode: 'light',
+    primary: {
+      main: '#FFCC00',
     },
-    typography: {
+    secondary: {
+      main: '#000000',
+    },
+  },
+  typography: {
+    fontFamily: 'poppins',
+    p: {
       fontFamily: 'poppins',
     },
-   
-
   },
-});
+  
+};
 
 function App() {
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={createTheme(themeOptions) }>
 
     <div className="App">
       <LandingPage />

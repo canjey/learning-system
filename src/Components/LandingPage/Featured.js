@@ -9,22 +9,38 @@ import CardMedia from "@mui/material/CardMedia";
 import Support from "../../assets/images/Support.jpg";
 import MarketingImage from "../../assets/images/Marketing.jpg";
 import Java from "../../assets/images/java.jpeg";
+import DataProtection from "../../assets/images/Protection.jpg";
+import Fade from '@mui/material/Fade';
+
+
 
 function PortfolioCard(props) {
   return (
-    <Grid item xs={12} sm={6} lg={3} xl={3}>
+    <Grid item xs={12} sm={6} lg={3} xl={3} spacing={4}>
       {console.log(props)}
-      <Card sx={{ width: "95%", height: '250px', marginBottom: '20px' }}>
+      <Card sx={{ padding:'10px',borderRadius:'8px', height: '380px', paddingBottom: '20px' }}>
         <CardMedia
           component="img"
           height="200"
           image={props.image}
           alt="green iguana"
-        />              <CardContent>
-          <Typography gutterBottom variant="p" component="div">
+          sx={{borderRadius:'8px'}}
+        />              
+        <CardContent sx={{textAlign:'left', display:"Grid", }}>
+          <Typography variant="p">
+            {props.school}
+          </Typography>
+          <Typography variant="h6" sx={{fontSize:'18px', }}>
             {props.name}
           </Typography>
+          <Typography variant="p" sx={{color:"blue", marginTop:'100px', position:'absolute'}}>
+            Earn a degree
+          </Typography>
+          <Typography variant="p" sx={{marginTop:'120px', position:'absolute', color:"#737474"}}>
+            Degree
+          </Typography>
         </CardContent>
+        
         <CardActions>
         </CardActions>
       </Card>
@@ -35,48 +51,56 @@ function PortfolioCard(props) {
 export default function Featured() {
   const featuredCourses = [{
     id: 1,
-    name: "Digital Marketing",
+    school:'University of illinois',
+    name: "Data Protection",
     rating: 4.5,
-    image: `${Marketing}`
+    image: `${DataProtection}`
   },
   {
     id: 2,
-    name: "IT Support",
+    school:'University of Colorado',
+    name: "Masters of Business Administration",
     rating: 4.5,
     image: `${Support}`
   },
   {
     id: 3,
-    name: "Marketing",
+    school:'University of illinois',
+    name: "Masters of Science in Data Science",
     rating: 4.5,
     image: `${MarketingImage}`
   },
   {
     id: 4,
-    name: "Digital Marketing",
+    school:'University of Colorado',
+    name: "Masters of Science in Acountancy (iMSA)",
     rating: 4.5,
     image: `${Marketing}`
   },
   {
     id: 5,
-    name: "Java",
+    school:'University of illinois',
+    name: "Masters of Science in Computer Science",
     rating: 4.5,
     image: `${Java}`
   },
   {
     id: 6,
-    name: "Digital Marketing",
+    school:'University of Colorado',
+    name: "Bachelor of Information Technology",
     rating: 4.5,
     image: `${Marketing}`
   },
   {
     id: 7,
-    name: "IT Support",
+    school:'University of illinois',
+    name: "Master if Information Technology",
     rating: 4.5,
     image: `${Support}`
   },
   {
     id: 8,
+    school:'University of Colorado',
     name: "IT Support",
     rating: 4.5,
     image: `${MarketingImage}`
@@ -93,16 +117,18 @@ export default function Featured() {
             Products
           </Typography>
         </Grid>
-        <Grid container sx={{marginTop:'20px'}}>
+        <Grid container spacing={2} sx={{marginTop:'20px', }}>
           {featuredCourses.map((product) => (
             <PortfolioCard
               key={product.id}
+              school={product.school}
               name={product.name}
               Description={product.Description}
               image={product.image}
             />
           ))}
         </Grid>
+
       </Grid>
     </>
   )

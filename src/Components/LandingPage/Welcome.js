@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
-import Education from '../../assets/images/Education (1).gif'
+import Education from '../../assets/images/Education.gif'
 import  '../../assets/css/style.css';
 import Button from '@mui/material/Button';
 
@@ -16,7 +16,7 @@ export default function Welcome(){
                     Welcome to Solidaridad <br/>
                     Online Learning System
                     </Typography>
-                    <Typography  sx={{marginTop:"30px", width:'80%', fontFamily:"inherit"}}>
+                    <Typography  sx={{marginTop:"30px", width:'80%'}}>
                     Want to take your career to a step further? Our platform provides a comprehensive solution for learning, knowledge sharing, and professional development. 
                     </Typography>
                     <Grid sx={{marginTop:"10%"}}>
