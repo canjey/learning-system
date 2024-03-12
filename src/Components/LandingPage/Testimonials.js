@@ -9,7 +9,7 @@ import Student from "../../assets/images/student.jpg"
 
 function PortfolioCard(props) {
     return (
-        <Grid item xs={12} sm={6} lg={3} md={1} xl={3} spacing={4}>
+        <Grid item xs={12} sm={6} lg={3} md={1} xl={3} spacing={4} rowSpacing={2} sx={{marginBottom:'60px'}}>
             <img src={Student} style={{ width: '50%', height: '50%', borderRadius: '300px' }} />
             <Typography variant="h6">
                 {props.name}
@@ -63,7 +63,7 @@ export default function Testimonials() {
                         Community
                     </Typography>
                 </Grid>
-                <Grid container spacing={4} sx={{ marginTop: '20px',  paddingLeft:'30px', textAlign:'center' }}>
+                <Grid container spacing={4} sx={{ marginTop: '20px', marginBottom:'30px', paddingLeft:'30px', textAlign:'center' }}>
                     {testimonials.map((product) => (
                         <PortfolioCard
                             key={product.id}
