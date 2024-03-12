@@ -11,8 +11,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Logo from '../../assets/images/logo.png';
+import User from "../../assets/images/user.png"
 
 const pages = ['Home', 'Features', 'Downloads', 'Support', 'Login'];
 const settings = ['Login','Signup'];
@@ -40,7 +40,7 @@ function ResponsiveAppBar() {
     <AppBar position="static" color="transparent" >
       <Container maxWidth="xl">
         <Box component="span" sx={{display: {xs:'block', md:'none'}}}>
-        <img src={Logo} style={{position:"absolute", width:'12rem', right:'calc(50% - 6rem)', height:'auto'}}/>
+        <img src={Logo} style={{position:"absolute", width:'12rem', right:'calc(50% - 6rem)', height:'auto', marginTop:'10px'}}/>
 
         </Box>
         <Toolbar disableGutters>
@@ -82,7 +82,7 @@ function ResponsiveAppBar() {
           </Box>
           <Box sx={{display:{xs:'none', md:'block'}}}>
 
-          <img src={Logo} />
+          <img src={Logo} style={{marginTop:'10px'}}/>
 
           </Box>
 
@@ -102,7 +102,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src={User} />
               </IconButton>
             </Tooltip>
             <Menu

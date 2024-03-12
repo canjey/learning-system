@@ -29,7 +29,7 @@ export default function LandingPage(){
         <>
             {/* <ThemeProvider theme={darkTheme}> */}
             <Header />
-              <Box sx={{paddingLeft: {md:'5%', xs:'10%' }, paddingRight: {md:'5%', xs:'10%'}}}>
+              <Box sx={{marginLeft: {md:'5%', xs:'30px' }, paddingRight: {md:'5%', xs:'10%'}}}>
                 <Welcome />
                 <Featured />
                 <Categories/>
