@@ -11,6 +11,9 @@ import MarketingImage from "../../assets/images/Marketing.jpg";
 import Java from "../../assets/images/java.jpeg";
 import DataProtection from "../../assets/images/Protection.jpg";
 import Fade from '@mui/material/Fade';
+import Divider from '@mui/material/Divider';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 
 
 
@@ -18,7 +21,12 @@ function PortfolioCard(props) {
   return (
     <Grid item xs={12} sm={6} lg={3} xl={3} spacing={4}>
       {console.log(props)}
-      <Card sx={{ padding:'10px',borderRadius:'8px', height: '380px', paddingBottom: '20px' }}>
+      <Card sx={{ padding:'10px',borderRadius:'8px', 
+                  height: '380px', paddingBottom: '20px',
+                  ':hover': {
+                    boxShadow: 10, 
+                  }
+                  }}>
         <CardMedia
           component="img"
           height="200"
@@ -33,9 +41,14 @@ function PortfolioCard(props) {
           <Typography variant="h6" sx={{fontSize:'18px', }}>
             {props.name}
           </Typography>
-          <Typography variant="p" sx={{color:"blue", marginTop:'100px', position:'absolute'}}>
-            Earn a degree
+          <Typography sx={{display:'flex', color:"#449be6", marginTop:'100px', position:'absolute'}}>
+          <Typography variant="p" href="#" >
+            Start Course
           </Typography>
+          <ArrowForwardIcon />
+
+          </Typography>
+          
           <Typography variant="p" sx={{marginTop:'120px', position:'absolute', color:"#737474"}}>
             Degree
           </Typography>
@@ -109,14 +122,17 @@ export default function Featured() {
   return (
     <>
       <Grid container sx={{ marginTop: '5%' }}>
-        <Grid item sx={{display:"flex", marginLeft:'1px'}}>
+        <Grid item sx={{display:"block", marginLeft:'1px'}}>
+          <Grid item sx={{display:'flex'}}>
           <Typography variant="h5">
             Featured 
           </Typography>
           <Typography variant="h5" sx={{color:'#FFCC00', marginLeft:'10px'}}>
             Products
           </Typography>
-        </Grid>
+          </Grid>          
+            <Divider orientation="horizontal" color="#FFCC00" sx={{width:'50%'}}/>
+          </Grid>
         <Grid container spacing={2} sx={{marginTop:'20px', }}>
           {featuredCourses.map((product) => (
             <PortfolioCard

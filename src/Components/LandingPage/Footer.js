@@ -22,7 +22,7 @@ export default function Footer() {
                     <Grid item md={3} xs={12} >
                         <img src={logo} />
                         {pages1.map((links) => (
-                            <Typography sx={{ marginTop: '8px', paddingLeft: '40px' }}>
+                            <Typography sx={{ marginTop: '8px', paddingLeft: '20px' }}>
                                 {links}
                             </Typography>
                         ))}

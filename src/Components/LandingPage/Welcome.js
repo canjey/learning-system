@@ -12,12 +12,12 @@ export default function Welcome(){
         <>
         <Box>
             <Grid container>
-                <Grid item md={6} sx={{marginTop:"30px", display:"block"}}>
+                <Grid item md={6} xs={12} sx={{marginTop:"30px", display:"block"}}>
                     <Typography variant="h4" sx={{marginTop:"20px"}}>
                     Welcome to Solidaridad <br/>
                     Online Learning System
                     </Typography>
-                    <Typography  sx={{marginTop:"30px", width:'80%'}}>
+                    <Typography  sx={{marginTop:"30px", width:'100%'}}>
                     Want to take your career to a step further? Our platform provides a comprehensive solution for learning, knowledge sharing, and professional development. 
                     </Typography>
                     <Grid sx={{marginTop:"10%", display:'flex'}}>
@@ -28,8 +28,8 @@ export default function Welcome(){
 
 
                 </Grid>
-                <Grid item md={4} sx={{marginLeft: {xs:'100px'}}}>
-                    <img src={Education} alt="Education" className="education-container"/>
+                <Grid item md={4} xs={12} sx={{marginLeft: {xs:'100px'}}}>
+                    <img src={Education} alt="Education" className="education-container" style={{width:'100%'}}/>
                 </Grid>
             </Grid>
 

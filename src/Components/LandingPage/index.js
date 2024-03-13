@@ -5,38 +5,30 @@ import Welcome from "./Welcome";
 import { Box } from "@mui/material";
 import Featured from "./Featured";
 import Categories from "./Categories";
-import Success from "./Stories";
+
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
-
+import Tutor from "./Tutor";
 
 export default function LandingPage(){
-    // const darkTheme = createTheme({
-    //     palette: {
-    //       mode: 'dark',
-    //       primary:{
-    //         light:'#fffff',
-    //         main:'#FFCC00',
-    //       },
-    //       typography: {
-    //         fontFamily: 'poppins',
-    //       },
-         
-      
-    //     },
-    //   });
+
     return(
         <>
             {/* <ThemeProvider theme={darkTheme}> */}
             <Header />
-              <Box sx={{marginLeft: {md:'5%', xs:'30px' }, paddingRight: {md:'5%', xs:'10%'}}}>
+              <Box sx={{marginLeft: {md:'5%', xs:'8%' }, paddingRight: {md:'5%', xs:'10%'}}}>
                 <Welcome />
                 <Featured />
                 <Categories/>
                 <Testimonials />
                 
               </Box>
-              <Box sx={{backgroundColor:'#f4f4f4'}}>
+              <Box sx={{backgroundColor:'#fdfbf5'}}>
+              <Tutor/>
+
+              </Box>
+              
+              <Box sx={{backgroundColor:'#f4f4f4'}}>              
               <Footer />
               </Box>
         {/* </ThemeProvider> */}

@@ -9,17 +9,22 @@ import Graphics from "../../assets/images/graphic.jpg"
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+
 
 function CategoriesCard(props) {
   return (
     <>
       <Grid item xs={12} sm={6} lg={3} xl={3}>
-        <Card sx={{ width: "100%", height: '100px', marginBottom: '20px', display:'flex', }}>
+        <Card sx={{ width: "100%", height: '100px', marginBottom: '20px', display:'flex', ':hover': {
+                    boxShadow: 5, 
+                  } }}>
           <CardMedia
             component="img"
             image={props.image}
             alt="green iguana"
-            sx={{width:'50%'}}
+            sx={{width:'50%', }}
+            
           />              
           <CardContent>
             <Typography gutterBottom variant="p" component="div">
@@ -92,21 +97,13 @@ export default function Categories() {
   return (
     <>
       <Grid container sx={{marginTop:'80px'}}>
-        <Grid item sx={{display:'flex'}}>
-          <Typography variant="h5">
-            Courses 
-          </Typography>
-          <Typography variant="h5" sx={{color: "#FFCC00", marginLeft:'10px'}}>
-             Categories
-          </Typography>
-          
-        </Grid>
+
         <Grid container rowSpacing={1} spacing={2} sx={{marginTop:'10px',}}>
           {featuredCourses.map((product) => (
             <CategoriesCard
               key={product.id}
               name={product.name}
-              Description={product.number}
+              number={product.number}
               image={product.image}
             />
           ))}
