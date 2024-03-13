@@ -19,12 +19,12 @@ export default function LandingPage() {
       <Header />
       <Box sx={{ marginLeft: { md: '5%', xs: '8%' }, paddingRight: { md: '5%', xs: '10%' } }}>
         <Welcome />
-        <Box sx={{marginTop:"-30px"}}>
+        <Box sx={{ marginTop: "-30px" }}>
           <motion.div
-            variants={fadeIn("up",0.2)}
+            variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once:false, amount: 0.1}}
+            viewport={{ once: false, amount: 0.1 }}
           >
             <Featured />
 
@@ -35,19 +35,19 @@ export default function LandingPage() {
         <Categories />
         <Box>
           <motion.div
-            variants={fadeIn("up",0.2)}
+            variants={fadeIn("up", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once:false, amount: 0.1}}
+            viewport={{ once: false, amount: 0.1 }}
           >
-        <Testimonials />
+            <Testimonials />
 
           </motion.div>
 
         </Box>
 
       </Box>
-      <Box sx={{ backgroundColor: '#fdfbf5', marginTop:'-40px' }}>
+      <Box sx={{ backgroundColor: '#fdfbf5', marginTop: '-40px' }}>
         <Tutor />
 
       </Box>

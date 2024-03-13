@@ -25,10 +25,10 @@ export default function Welcome() {
                             With a comprehensive suite of features, Solidaridad is your one-stop destination for all your learning and knowledge sharing needs.                    </Typography>
 
                         <Grid container sx={{ marginTop: "10%", display: 'flex' }}>
-                            <Grid item md={6} xs={6}>
+                            <Grid item md={6} xs={12}>
                             <Button variant="contained" xs={12} sx={{ borderRadius: "30px" }}>Explore Courses</Button>
                             </Grid>
-                            <Grid item md={6} xs={6}>
+                            <Grid item md={6} xs={12}>
                             <GoogleButton style={{ borderRadius: '30px', backgroundColor: '#ffffff', color: "black", }} />
                             </Grid>
 
