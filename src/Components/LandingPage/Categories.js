@@ -97,6 +97,17 @@ export default function Categories() {
   return (
     <>
       <Grid container sx={{marginTop:'80px'}}>
+      <Grid item sx={{display:"block", marginLeft:'1px'}}>
+        <Grid item sx= {{display:'flex'}}>
+        <Typography variant="h5">
+            Courses
+          </Typography>
+          <Typography variant="h5" sx={{color:'#FFCC00', marginLeft:'10px'}}>
+            Categories
+          </Typography>
+        </Grid>
+        <Divider orientation="horizontal" color="#FFCC00" sx={{width:'50%'}}/>
+        </Grid>
 
         <Grid container rowSpacing={1} spacing={2} sx={{marginTop:'10px',}}>
           {featuredCourses.map((product) => (

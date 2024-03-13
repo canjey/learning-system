@@ -6,6 +6,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import Link from '@mui/material/Link';
+
 
 
 
@@ -28,7 +30,9 @@ export default function Footer() {
                         ))}
                     </Grid>
                     <Grid item md={3} xs={12}>
+                    
                     <Typography variant="h6" sx={{ marginTop: '10px', marginBottom: '32px', marginLeft: '40px' }}>Certifications</Typography>
+                    
                         {secondRow.map((links) => (
                             <Typography sx={{ marginTop: '10px', paddingLeft: '40px' }}>
                                 {links}
@@ -44,7 +48,7 @@ export default function Footer() {
                         ))}
                     </Grid>
                     <Grid item md={2} xs={12}>
-                    <Typography variant="h6" sx={{ marginTop: '10px', marginBottom: '32px', marginLeft: '40px' }}>Quick Links</Typography>
+                    <Typography  variant="h6" sx={{ marginTop: '10px', marginBottom: '32px', marginLeft: '40px' }}>Quick Links</Typography>
                         {quick.map((links) => (
                             <Typography sx={{ marginTop: '10px', paddingLeft: '40px' }}>
                                 {links}
