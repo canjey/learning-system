@@ -21,8 +21,10 @@ export default function Footer() {
         <>
             <Box>
                 <Grid container sx={{ padding: '3%' }}>
-                    <Grid item md={3} xs={12} >
+                    <Grid item md={3} xs={12}  >
+                        <Grid item xs={12} style={{xs: {marginLeft:'40px'}}}>
                         <img src={logo} />
+                        </Grid>
                         {pages1.map((links) => (
                             <Typography sx={{ marginTop: '8px', marginLeft: '40px' }}>
                                 {links}

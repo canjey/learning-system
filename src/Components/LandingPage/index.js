@@ -19,7 +19,7 @@ export default function LandingPage() {
       <Header />
       <Box sx={{ marginLeft: { md: '5%', xs: '8%' }, paddingRight: { md: '5%', xs: '10%' } }}>
         <Welcome />
-        <Box sx={{ marginTop: {xs:'2%', md: '4%'} }}>
+        <Box sx={{ marginTop: {xs:'2%', md: '-4%'} }}>
           <motion.div
             variants={fadeIn("up", 0.1)}
             initial="hidden"
