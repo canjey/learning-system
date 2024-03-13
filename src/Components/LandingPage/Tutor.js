@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 export default function Tutor(){
     return (
         <>
-        <Grid container columnSpacing={1} sx={{paddingLeft:'50px', backgroundColor:'' }}>
+        <Grid container columnSpacing={1} sx={{paddingLeft:'50px', backgroundColor:'', paddingBottom:'20px' }}>
             <Grid item md={4} xs={12} sx={{padding:'20px', width:'60%'}} >
                 <img src={Tutor1} style={{width:'100%', }}/>
             </Grid>
