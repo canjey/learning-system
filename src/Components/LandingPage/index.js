@@ -5,34 +5,58 @@ import Welcome from "./Welcome";
 import { Box } from "@mui/material";
 import Featured from "./Featured";
 import Categories from "./Categories";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "../variant"
 import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import Tutor from "./Tutor";
 
-export default function LandingPage(){
+export default function LandingPage() {
 
-    return(
-        <>
-            {/* <ThemeProvider theme={darkTheme}> */}
-            <Header />
-              <Box sx={{marginLeft: {md:'5%', xs:'8%' }, paddingRight: {md:'5%', xs:'10%'}}}>
-                <Welcome />
-                <Featured />
-                <Categories/>
-                <Testimonials />
-                
-              </Box>
-              <Box sx={{backgroundColor:'#fdfbf5'}}>
-              <Tutor/>
+  return (
+    <>
+      {/* <ThemeProvider theme={darkTheme}> */}
+      <Header />
+      <Box sx={{ marginLeft: { md: '5%', xs: '8%' }, paddingRight: { md: '5%', xs: '10%' } }}>
+        <Welcome />
+        <Box>
+          <motion.div
+            variants={fadeIn("up",0.2)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once:false, amount: 0.1}}
+          >
+            <Featured />
 
-              </Box>
-              
-              <Box sx={{backgroundColor:'#f4f4f4'}}>              
-              <Footer />
-              </Box>
-        {/* </ThemeProvider> */}
-        
-        </>
-    )
+          </motion.div>
+
+        </Box>
+
+        <Categories />
+        <Box>
+          <motion.div
+            variants={fadeIn("up",0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once:false, amount: 0.1}}
+          >
+        <Testimonials />
+
+          </motion.div>
+
+        </Box>
+
+      </Box>
+      <Box sx={{ backgroundColor: '#fdfbf5' }}>
+        <Tutor />
+
+      </Box>
+
+      <Box sx={{ backgroundColor: '#f4f4f4' }}>
+        <Footer />
+      </Box>
+      {/* </ThemeProvider> */}
+
+    </>
+  )
 }

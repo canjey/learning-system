@@ -14,7 +14,7 @@ import Guy from '../../assets/images/guy2.jpg';
 
 function PortfolioCard(props) {
     return (
-        <Grid item xs={12} sm={6} lg={3} md={1} xl={3} spacing={4} rowSpacing={2} sx={{marginBottom:'60px'}}>
+        <Grid item xs={12} sm={6} lg={3} md={3} xl={3} spacing={4} rowSpacing={2} sx={{marginBottom:'60px'}}>
             <img src={props.image} style={{ width: '200px', height: '200px', borderRadius: '300px' }} />
             <Typography variant="h6">
                 {props.name}
