@@ -19,7 +19,7 @@ export default function LandingPage() {
       <Header />
       <Box sx={{ marginLeft: { md: '5%', xs: '8%' }, paddingRight: { md: '5%', xs: '10%' } }}>
         <Welcome />
-        <Box sx={{marginTop:"-50px"}}>
+        <Box sx={{marginTop:"-30px"}}>
           <motion.div
             variants={fadeIn("up",0.2)}
             initial="hidden"
@@ -47,7 +47,7 @@ export default function LandingPage() {
         </Box>
 
       </Box>
-      <Box sx={{ backgroundColor: '#fdfbf5' }}>
+      <Box sx={{ backgroundColor: '#fdfbf5', marginTop:'-40px' }}>
         <Tutor />
 
       </Box>

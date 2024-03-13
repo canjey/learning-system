@@ -9,12 +9,12 @@ import Button from '@mui/material/Button';
 export default function Tutor(){
     return (
         <>
-        <Grid container columnSpacing={1} sx={{padding:'50px', backgroundColor:'' }}>
-            <Grid item md={4} sx={{padding:'20px', width:'60%'}} >
-                <img src={Tutor1} style={{width:'100%', marginTop:'-60px'}}/>
+        <Grid container columnSpacing={1} sx={{paddingLeft:'50px', backgroundColor:'' }}>
+            <Grid item md={4} xs={12} sx={{padding:'20px', width:'60%'}} >
+                <img src={Tutor1} style={{width:'100%', }}/>
             </Grid>
-            <Grid item md={6} >
-                <Typography variant="h4">
+            <Grid item md={6} sx={{marginTop:'30px'}} >
+                <Typography variant="h5">
                     Become a Tutor?
                 </Typography>
                 <Typography variant ="h6">

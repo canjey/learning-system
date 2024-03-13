@@ -26,7 +26,7 @@ export default function Welcome() {
 
                         <Grid sx={{ marginTop: "10%", display: 'flex' }}>
                             <Button variant="contained" sx={{ borderRadius: "30px" }}>Explore Courses</Button>
-                            <GoogleButton style={{ borderRadius: '30px', backgroundColor: '#FFCC00', color: "black", }} />
+                            <GoogleButton style={{ borderRadius: '30px', backgroundColor: '#ffffff', color: "black", }} />
 
                         </Grid>
 
