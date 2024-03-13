@@ -16,13 +16,13 @@ function PortfolioCard(props) {
     return (
         <Grid item xs={12} sm={6} lg={3} md={3} xl={3} spacing={4} rowSpacing={2} sx={{marginBottom:'60px'}}>
             <img src={props.image} style={{ width: '200px', height: '200px', borderRadius: '300px' }} />
-            <Typography variant="h6">
+            <Typography variant="h6" sx={{marginLeft:'20%'}}>
                 {props.name}
             </Typography>
-            <Typography variant="p" color="GrayText">
+            <Typography variant="p" color="GrayText" sx={{marginLeft:'20%'}}>
                 {props.country}
             </Typography>
-            <Divider orientation="horizontal" color="#FFCC00"   sx={{width:'20%', marginTop:'10px', marginBottom:'30px'}}/>
+            <Divider orientation="horizontal" color="#FFCC00"   sx={{width:'20%', marginTop:'10px', marginBottom:'30px', marginLeft:'20%'}}/>
             <Typography>
                 "{props.testimony}"
             </Typography>
@@ -75,7 +75,7 @@ export default function Testimonials() {
           </Grid>          
             <Divider orientation="horizontal" color="#FFCC00" sx={{width:'50%'}}/>
           </Grid>
-                <Grid container spacing={4} sx={{ marginTop: '20px', marginBottom:'30px', paddingLeft:'20px', textAlign:'left' }}>
+                <Grid container spacing={4} sx={{ marginTop: '20px',  paddingLeft:'20px', textAlign:'left' }}>
                     {testimonials.map((product) => (
                         <PortfolioCard
                             key={product.id}

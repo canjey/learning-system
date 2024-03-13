@@ -39,7 +39,7 @@ export default function Welcome() {
                         viewport={{ once: false, amount: 0.3 }}
                         item md={2} xs={12}
                         sx={{ marginLeft: { xs: '50px', md: '30px' }, width: { xs: "150%" } }}>
-                        <img src={Education} alt="Education" className="education-container" style={{ width: '100%' }} />
+                        <img src={Education} alt="Education" className="education-container" style={{ width: '100%',  marginLeft:'50px' }} />
                     </motion.Grid>
                 </Grid>
 

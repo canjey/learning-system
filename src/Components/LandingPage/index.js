@@ -19,7 +19,7 @@ export default function LandingPage() {
       <Header />
       <Box sx={{ marginLeft: { md: '5%', xs: '8%' }, paddingRight: { md: '5%', xs: '10%' } }}>
         <Welcome />
-        <Box>
+        <Box sx={{marginTop:"-50px"}}>
           <motion.div
             variants={fadeIn("up",0.2)}
             initial="hidden"
@@ -35,7 +35,7 @@ export default function LandingPage() {
         <Categories />
         <Box>
           <motion.div
-            variants={fadeIn("up",0.5)}
+            variants={fadeIn("up",0.2)}
             initial="hidden"
             whileInView={"show"}
             viewport={{once:false, amount: 0.1}}

@@ -121,7 +121,7 @@ export default function Featured() {
   ]
   return (
     <>
-      <Grid container sx={{ marginTop: '5%' }}>
+      <Grid container>
         <Grid item sx={{display:"block", marginLeft:'1px'}}>
           <Grid item sx={{display:'flex'}}>
           <Typography variant="h5">
